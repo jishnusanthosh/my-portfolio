@@ -30,7 +30,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
-              className="text-[55px] font-bold leading-[0.8] lg:text-[110px]"
+              className="text-[55px] font-bold leading-[0.8] lg:text-[83px]"
             >
               JISHNU <span>SANTHOSH</span>
             </motion.h1>
@@ -39,8 +39,9 @@ const Banner = () => {
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
-              className="mb-6 text-[36px] lg:text-[60px] font-secondary font-semibold uppercase leading-[1] "
+              className="mb-6 text-[36px] lg:text-[46px] font-secondary font-semibold uppercase leading-[1] "
             >
+              <br />
               <span className="mr-4">I am a </span>
               <TypeAnimation
                 sequence={[
@@ -105,7 +106,6 @@ const Banner = () => {
             variants={fadeIn('down', 0.5)}
             initial="hidden"
             whileInView={'show'}
-       
             className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px]"
           >
             <img src={Image} alt="" />
