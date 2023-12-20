@@ -16,30 +16,39 @@ const About = () => {
   return (
     <div className="section" id="about" ref={ref}>
       <div className="container mx-auto">
-        <div className='flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen' >
+        <div className="flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen">
           {/* img */}
-          <motion.div 
-          variants={fadeIn('right',0.3)}
-          initial='hidden'
-          whileInView={'show'}
-          viewport={{once:false,amount:0.3}}
-          className="flex-1 bg-about bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top">
-            
-          </motion.div>
+          <motion.div
+            variants={fadeIn('right', 0.3)}
+            initial="hidden"
+            whileInView={'show'}
+            viewport={{ once: false, amount: 0.3 }}
+            className="flex-1 bg-about bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top"
+          ></motion.div>
 
           {/* text */}
-          <motion.div  variants={fadeIn('left',0.5)}
-          initial='hidden'
-          whileInView={'show'}
-          viewport={{once:false,amount:0.3}} className="flex-1">
+          <motion.div
+            variants={fadeIn('left', 0.5)}
+            initial="hidden"
+            whileInView={'show'}
+            viewport={{ once: false, amount: 0.3 }}
+            className="flex-1"
+          >
             <h2 className="h2 text-accent">About me.</h2>
-            <h3 className='h3 mb-4' >I'm Freelance Full-Stack Developer</h3>
+            <h3 className="h3 mb-4">I'm Freelance Full-Stack Developer</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatem sunt libero molestiae autem culpa voluptatum. Nisi,
-              modi rerum, earum fugit quisquam eveniet tempore consequatur amet
-              facere, dicta iusto aperiam odio.
+              I'm Jishnu Santhosh, a dedicated computer engineer
+              specializing in Fullstack web software development. With a Diploma in
+              Computer Engineering, my expertise spans both hardware and
+              software engineering. Proficient in JavaScript, React, Node.js,
+              and MongoDB, I architect and develop sophisticated solutions. My
+              commitment to excellence is evident in crafting seamless user
+              experiences.I align my work with industry trends. Let's
+              connect to explore how my technical acumen contributes to
+              transformative projects at the intersection of software
+              engineering .
             </p>
+            <br />
 
             {/* stats */}
             <div className="flex gap-x-6  lg:gap-x-10 mb-12">

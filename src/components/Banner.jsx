@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Image from '../assets/avatar.svg'
+import Image from '../assets/avatar.png'
 
 import {
   FaGithub,
@@ -63,8 +63,12 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="mb-8 max-w-lg mx-auto lg:mx-0 "
             >
-              cca hic eveniet tempore dolore enim eligendi, nulla recusandae
-              nemo consectetur? Tempore, nobis cum. Officiis.
+
+              Hello, I'm Jishnu Santhosh, a dedicated computer engineer from
+              India, specializing in full-stack web software development. With a
+              passion for crafting seamless digital experiences, Let's connect and explore the
+              possibilities of transforming ideas into impactful web
+              applications.
             </motion.p>
             <motion.div
               variants={fadeIn('up', 0.6)}
@@ -74,7 +78,7 @@ const Banner = () => {
               className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0 "
             >
               <button className="btn btn-lg ">Contact me</button>
-              <a href="#" className="text-gradient btn-link ">
+              <a href="/" className="text-gradient btn-link ">
                 My Portfolio
               </a>
             </motion.div>
@@ -85,19 +89,19 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex text-[20px] gap-6 max-w-max mx-auto"
             >
-              <a href="#">
+              <a href="https://www.linkedin.com/in/jishnusanthosh/">
                 <FaLinkedin />
               </a>
-              <a href="#">
+              <a href="https://github.com/jishnusanthosh/">
                 <FaGithub />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/jiz__nu__vs/">
                 <FaInstagram />
               </a>
-              <a href="#">
+              <a href="https://www.facebook.com/jishnu.santhosh.779/">
                 <FaFacebook />
               </a>
-              <a href="#">
+              <a href="mailto:jishnusanthosh321@gmail.com">
                 <FaEnvelope />
               </a>
             </motion.div>
@@ -106,7 +110,7 @@ const Banner = () => {
             variants={fadeIn('down', 0.5)}
             initial="hidden"
             whileInView={'show'}
-            className="hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px]"
+            className="hidden lg:flex flex-1 max-w-[300px] lg:max-w-[400px]"
           >
             <img src={Image} alt="" />
           </motion.div>

@@ -11,10 +11,24 @@ import { fadeIn } from '../variants'
 //services
 
 const services = [
-  { name: 'UI/UX Design', description: 'lorem ', link: 'Learn More' },
-  { name: 'REACT Development', description: 'lorem ', link: 'Learn More' },
-  { name: 'Full-Stack Development', description: 'lorem ', link: 'Learn More' },
-]
+  {
+    name: 'UI/UX Design',
+    description: 'Crafting visually stunning and user-centric interfaces to enhance user experiences.',
+    link: 'Learn More'
+  },
+  {
+    name: 'REACT Development',
+    description: 'Building dynamic and responsive web applications using the power of React.js.',
+    link: 'Learn More'
+  },
+  {
+    name: 'Full-Stack Development',
+    description: 'Creating end-to-end solutions with expertise in both front-end and back-end technologies.',
+    link: 'Learn More'
+  }
+];
+
+
 
 const Services = () => {
   return (
