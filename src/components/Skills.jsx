@@ -99,7 +99,7 @@ const Skills = () => {
       animate="show"
     >
       <motion.h2
-        className="h2 text-accent mb-6 mx-8"
+        className="h2 text-accent mb-6 mx-4 md:mx-8 text-center md:text-left"
         variants={headingAnimation}
         initial="hidden"
         animate="show"
@@ -107,19 +107,19 @@ const Skills = () => {
         My Skills.
       </motion.h2>
       <motion.div
-        className="text-[20px] gap-6 max-w-max mx-auto flex flex-col gap-y-10 lg:flex-row"
+        className="text-base md:text-lg gap-7 max-w-screen-md mx-auto flex flex-col gap-y-7 md:flex-row"
         variants={skillsContainerAnimation}
         initial="hidden"
         animate="show"
       >
-        <div className="grid grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-7">
           {Object.entries(skillIcons).map(([skill, { icon, progress }]) => (
             <motion.div
               key={skill}
-              className="m-2 col-span-1"
+              className="m-2"
               variants={fadeIn}
-              initial={{ width: 0 }}
-              animate={{ width: "90%" }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
             >
               <CircularProgress progress={progress} size={100} />
               <FontAwesomeIcon
@@ -127,7 +127,7 @@ const Skills = () => {
                 size="2x"
                 style={{ color: "#29b6f6", marginTop: "10px" }}
               />
-              <h3 className="h3">{skill}</h3>
+              <h3 className="h3 text-center mt-2">{skill}</h3>
             </motion.div>
           ))}
         </div>
