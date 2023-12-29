@@ -1,7 +1,32 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHtml5,
+  faJs,
+  faReact,
+  faNode,
+  faCss3Alt,
+  faGithub,
+  faAws,
+} from "@fortawesome/free-brands-svg-icons";
+import { faDatabase } from "@fortawesome/free-solid-svg-icons"; // Added database icon
+
 // variants
-import { fadeIn } from '../variants';
+import { fadeIn } from "../variants";
+
+const skillIcons = {
+  HTML: { icon: faHtml5, progress: 80 },
+  JavaScript: { icon: faJs, progress: 90 },
+  React: { icon: faReact, progress: 85 },
+  Node: { icon: faNode, progress: 90 },
+  Express: { icon: faNode, progress: 90 },
+  CSS: { icon: faCss3Alt, progress: 80 },
+  GitHub: { icon: faGithub, progress: 85 },
+  "AWS/EC2": { icon: faAws, progress: 75 },
+  MongoDB: { icon: faDatabase, progress: 80 },
+  Firebase: { icon: faDatabase, progress: 75 },
+};
 
 const CircularProgress = ({ progress, size }) => {
   const radius = size / 2;
@@ -17,7 +42,7 @@ const CircularProgress = ({ progress, size }) => {
   }, [controls, circumference, progressOffset]);
 
   return (
-    <div className="circular-progress" style={{ textAlign: 'center' }}>
+    <div className="circular-progress" style={{ textAlign: "center" }}>
       <motion.svg
         width={size}
         height={size}
@@ -30,7 +55,7 @@ const CircularProgress = ({ progress, size }) => {
         <motion.circle
           cx={size / 2}
           cy={size / 2}
-          r={radius - 5} 
+          r={radius - 5}
           strokeWidth={10}
           stroke="#29b6f6"
           fill="transparent"
@@ -39,7 +64,14 @@ const CircularProgress = ({ progress, size }) => {
           animate={controls}
         />
         {/* Text in the Center */}
-        <text x="50%" y="50%" fontSize="20" textAnchor="middle" dy=".3em" fill="white">
+        <text
+          x="50%"
+          y="50%"
+          fontSize="20"
+          textAnchor="middle"
+          dy=".3em"
+          fill="white"
+        >
           {progress}%
         </text>
       </motion.svg>
@@ -56,7 +88,7 @@ const Skills = () => {
   };
 
   // Common animation for the entire skills section
-  const skillsSectionAnimation = fadeIn('left', 0.5);
+  const skillsSectionAnimation = fadeIn("left", 0.5);
 
   return (
     <motion.section
@@ -81,67 +113,23 @@ const Skills = () => {
         animate="show"
       >
         <div className="grid grid-cols-5 gap-10">
-          {/* HTML */}
-          <motion.div   className="m-2 col-span-1" variants={fadeIn} initial={{ width: 0 }} animate={{ width: '90%' }}>
-            <CircularProgress progress={90} size={100} />
-            <h3 className="h3">HTML</h3>
-          </motion.div>
-
-          {/* JavaScript */}
-          <motion.div className="m-2 col-span-1" variants={fadeIn} initial={{ width: 0 }} animate={{ width: '80%' }}>
-            <CircularProgress progress={90} size={100} />
-            <h3 className="h3">JavaScript</h3>
-          </motion.div>
-
-          {/* React */}
-          <motion.div className="m-2 col-span-1" variants={fadeIn} initial={{ width: 0 }} animate={{ width: '85%' }}>
-            <CircularProgress progress={85} size={100} />
-            <h3 className="h3">React</h3>
-          </motion.div>
-
-          {/* Node.js */}
-          <motion.div className="m-2 col-span-1" variants={fadeIn} initial={{ width: 0 }} animate={{ width: '75%' }}>
-            <CircularProgress progress={85} size={100} />
-            <h3 className="h3">Node.js</h3>
-          </motion.div>
-
-          {/* MongoDB */}
-          <motion.div className="m-2 col-span-1" variants={fadeIn} initial={{ width: 0 }} animate={{ width: '70%' }}>
-            <CircularProgress progress={85} size={100} />
-            <h3 className="h3">MongoDB</h3>
-          </motion.div> 
-          
-           {/* MongoDB */}
-          <motion.div className="m-2 col-span-1" variants={fadeIn} initial={{ width: 0 }} animate={{ width: '70%' }}>
-            <CircularProgress progress={85} size={100} />
-            <h3 className="h3">Express</h3>
-          </motion.div>
-            {/* MongoDB */}
-            <motion.div className="m-2 col-span-1" variants={fadeIn} initial={{ width: 0 }} animate={{ width: '70%' }}>
-            <CircularProgress progress={85} size={100} />
-            <h3 className="h3">FireBase</h3>
-          </motion.div>
-
-            {/* MongoDB */}
-            <motion.div className="m-2 col-span-1" variants={fadeIn} initial={{ width: 0 }} animate={{ width: '70%' }}>
-            <CircularProgress progress={85} size={100} />
-            <h3 className="h3">Git Hub</h3>
-          </motion.div>
-
-            {/* MongoDB */}
-            <motion.div className="m-2 col-span-1" variants={fadeIn} initial={{ width: 0 }} animate={{ width: '70%' }}>
-            <CircularProgress progress={70} size={100} />
-            <h3 className="h3">Aws/ec2</h3>
-          </motion.div>
-
-            {/* MongoDB */}
-            <motion.div className="m-2 col-span-1" variants={fadeIn} initial={{ width: 0 }} animate={{ width: '70%' }}>
-            <CircularProgress progress={75} size={100} />
-            <h3 className="h3">Tailwind</h3>
-          </motion.div>
-
-
-
+          {Object.entries(skillIcons).map(([skill, { icon, progress }]) => (
+            <motion.div
+              key={skill}
+              className="m-2 col-span-1"
+              variants={fadeIn}
+              initial={{ width: 0 }}
+              animate={{ width: "90%" }}
+            >
+              <CircularProgress progress={progress} size={100} />
+              <FontAwesomeIcon
+                icon={icon}
+                size="2x"
+                style={{ color: "#29b6f6", marginTop: "10px" }}
+              />
+              <h3 className="h3">{skill}</h3>
+            </motion.div>
+          ))}
         </div>
       </motion.div>
     </motion.section>
