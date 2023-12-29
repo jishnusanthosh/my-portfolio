@@ -12,7 +12,7 @@ import { fadeIn } from '../variants'
 
 const services = [
   {
-    name: 'UI/UX Design',
+    name: 'Frontend Design',
     description: 'Crafting visually stunning and user-centric interfaces to enhance user experiences.',
     link: 'Learn More'
   },
