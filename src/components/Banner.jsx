@@ -17,12 +17,12 @@ import { fadeIn } from "../variants";
 const Banner = () => {
   const handleResumeDownload = () => {
     // Update the path based on your file location in the public folder
-    const resumePath = "/resume.pdf";
+    const resumePath = "/JISHNU_SANTHOSH_RESUME.pdf";
 
     // Create an anchor element
     const link = document.createElement("a");
     link.href = resumePath;
-    link.download = "resume.pdf";
+    link.download = "JISHNU_SANTHOSH_RESUME.pdf";
 
     // Trigger a click on the anchor element
     document.body.appendChild(link);
