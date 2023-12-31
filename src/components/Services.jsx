@@ -77,12 +77,12 @@ const Services = () => {
                     </div>
                     <div className="flex flex-col flex-1 items-end ">
                       <a
-                        href="#"
+                        href="/portfolio"
                         className="btn w-9 h-9 mb-[42px] flex justify-center items-center"
                       >
                         <BsArrowUpRight />
                       </a>
-                      <a href="" className="text-gradient text-sm ">
+                      <a href="/portfolio"  className="text-gradient text-sm ">
                         {link}
                       </a>
                     </div>

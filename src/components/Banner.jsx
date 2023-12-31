@@ -95,7 +95,7 @@ const Banner = () => {
               >
                 Resume <FaDownload className="ml-2" />
               </a>
-              <a href="/" className="text-gradient btn-link ">
+              <a href="https://jishnusanthosh.online" className="text-gradient btn-link ">
                 My Portfolio
               </a>
             </motion.div>
